@@ -1,28 +1,31 @@
 # ProjectTemplate-Python
 
-[English](README.md) **|** [简体中文](README_CN.md) &emsp; [GitHub](https://github.com/xinntao/BasicSR) **|** [Gitee码云](https://gitee.com/xinntao/BasicSR)
+[English](README.md) **|** [简体中文](README_CN.md) &emsp; [GitHub](https://github.com/xinntao/ProjectTemplate-Python) **|** [Gitee码云](https://gitee.com/xinntao/ProjectTemplate-Python)
 
-1. Setup
-    1. `pre-commit`
-    1. `.gitignore`
-    1. setup.cfg
-    1. LICENSE
+## File Modification
 
-1. Add your files
+1. Setup *pre-commit* hook
+    1. If necessary, modify `.pre-commit-config.yaml`
+    1. In the repository root path, run
+    > pre-commit install
+1. Modify the `.gitignore` file
+1. Modify the `LICENSE` file
+    This repository uses the *MIT* license, you may change it to other licenses
+1. Modify the *setup* files
+    1. `setup.cfg`
+    1. `setup.py`, especially the `basicsr` keyword
+1. Modify the `requirements.txt` files
+1. Modify the `VERSION` file
 
-1. requirements.txt
+## GitHub Workflows
 
+1. [pylint](./github/workflows/pylint.yml)
+1. [gitee-repo-mirror](./github/workflow/gitee-repo-mirror.yml) - Support Gitee码云
+    1. Clone GitHub repo in the [Gitee](https://gitee.com/) website
+    1. Modify [gitee-repo-mirror](./github/workflow/gitee-repo-mirror.yml)
+    1. In Github *Settings* -> *Secrets*, add `SSH_PRIVATE_KEY`
 
-1. Common Files
+## Other Procedures
 
-
-1. setup.py
-
-
-1. GitHub Workflows
-    1. pylint
-    1. gitee-repo-mirror
-1. VERSION
-1. Description
-1. Gitee码云 Support
-1. 中文文档 Support
+1. The `description`, `website`, `topics` in the main page
+1. Support Chinese documents, for example, `README_CN.md`
