@@ -22,8 +22,9 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 yapf isort
 
+    # modify the folders accordingly
     - name: Lint
       run: |
         flake8 .
-        isort --check-only --diff basicsr/ options/ scripts/ tests/ setup.py
-        yapf -r -d basicsr/ options/ scripts/ tests/ setup.py
+        isort --check-only --diff basicsr/ options/ scripts/ tests/ inference/ setup.py
+        yapf -r -d basicsr/ options/ scripts/ tests/ inference/ setup.py
